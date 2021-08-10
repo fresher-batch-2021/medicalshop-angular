@@ -1,0 +1,26 @@
+
+<h3>Cart Items</h3>
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>ProductName</th>
+        <th>Price</th>
+      </tr>
+      <!-- <tr>total</tr> -->
+    </thead>
+    <tbody id="cart-table"></tbody>
+    <tr *ngFor="let cart of cartItems">
+    <td>{{cart.SNo}}</td>
+    <td>{{cart.ProductName}}</td>
+    <td>{{cart.Price}}</td>
+    <tr >
+        <td></td>
+        <td colspan = 1><strong>Total</strong></td>
+        
+    
+<td>{{gettotal()}}</td></tr>
+  </table>
+ <button> <a  class="order-button" routerLink="payment"  >Order Now</a></button>
+</section>

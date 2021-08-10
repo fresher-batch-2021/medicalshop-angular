@@ -1,0 +1,22 @@
+<h3 class="head">Register form</h3>
+    <form onsubmit="register()">
+        <label for="name">Name*</label>
+        <input type="text" name="name" id="name" placeholder="Enter the Name" required  autofocus > <br/>
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" required > <br/>
+        <label for="mobno">MobileNo*</label>
+        <input type="tel" name="mobno" id="mobno" required > <br/>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob"> <br/>
+        <label for="password">Password*</label>
+        <input type="password" name="password" id="password" required> <br/>
+        <label for="conpassword">ConfrimPassword*</label>
+        <input type="password" name="conpassword" id="conpassword" required> <br/>
+        <label>Gender</label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <button class="button">Register</button>
+    </form>
+    <router-outlet> </router-outlet>
