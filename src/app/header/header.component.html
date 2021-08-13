@@ -1,11 +1,12 @@
 <header> 
     <nav class="navbar">  
           <img class="img1" src="assets/images/med1.png" alt="logo"><span class="medshopfnt">Med Shop</span>
-          <a routerLink="login">login</a>
-          <a routerLink="register">signup</a> 
-         <a href="orders.html">Orders</a>
-         <a href="cart" >Cart</a>
-          <a href="home" >Home</a>
-          <input type="text" placeholder="Search">
+          <a routerLink='index' *ngIf="isLoggedIn" (click)='logout()'>logout</a>
+          <a routerLink="login" *ngIf="!isLoggedIn">login </a>
+          <a routerLink="register"  *ngIf="!isLoggedIn">signup</a> 
+         <a routerLink="orders.html" *ngIf="isLoggedIn">Orders</a>
+         <a routerLink="cart" >Cart</a>
+          <a routerLink="home" >Home</a>
+          <div class="welcome" *ngIf="isLoggedIn"> Welcome {{email}} </div>
     </nav>
     </header>

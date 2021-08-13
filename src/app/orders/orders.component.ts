@@ -13,16 +13,16 @@ export class OrdersComponent implements OnInit {
   }
 
 }
- deleteItem()
- {
-   let cfm=confrim("do you want to delete");
-   if(cfm)
-   {
-     alert("Successfully Deleted");
-     window.location.href="cart";
-   }
- }
+//  deleteItem()
+//  {
+//    let cfm=confrim("do you want to delete");
+//    if(cfm)
+//    {
+//      alert("Successfully Deleted");
+//      window.location.href="cart";
+//    }
+//  }
 
-function deleteItem() {
-  throw new Error('Function not implemented.');
-}
+// function deleteItem() {
+//   throw new Error('Function not implemented.');
+// }

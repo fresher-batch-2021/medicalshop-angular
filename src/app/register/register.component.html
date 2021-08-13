@@ -1,22 +1,16 @@
 <h3 class="head">Register form</h3>
-    <form onsubmit="register()">
+    <form (ngSubmit)="register()">
         <label for="name">Name*</label>
-        <input type="text" name="name" id="name" placeholder="Enter the Name" required  autofocus > <br/>
+        <input type="text" name="name"  [(ngModel)]="name" id="name" placeholder="Enter the Name" required  autofocus > <br/>
         <label for="email">Email*</label>
-        <input type="email" name="email" id="email" required > <br/>
-        <label for="mobno">MobileNo*</label>
-        <input type="tel" name="mobno" id="mobno" required > <br/>
-        <label for="dob">Date of Birth</label>
-        <input type="date" name="dob" id="dob"> <br/>
+        <input type="email" name="email"  [(ngModel)]="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Example mail id : example@example.com" > <br/>
+        <label for="mobileNo">MobileNo*</label>
+        <input type="tel" name="mobileNo"  [(ngModel)]="mobileNo" id="mobileNo" required > <br/>
         <label for="password">Password*</label>
-        <input type="password" name="password" id="password" required> <br/>
-        <label for="conpassword">ConfrimPassword*</label>
-        <input type="password" name="conpassword" id="conpassword" required> <br/>
-        <label>Gender</label>
-        <input type="radio" id="Female" name="gender" value="Female">
-        <label for="female">Female</label>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
-        <button class="button">Register</button>
+        <input type="password" name="password"  [(ngModel)]="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" > <br/>
+        <label for="confirmpassword">ConfrimPassword*</label>
+        <input type="password" name="confirmpassword"  [(ngModel)]="confirmpassword" id="confirmpassword" required> <br/>
+        <button class="button" type="submit">Register</button>
     </form>
     <router-outlet> </router-outlet>

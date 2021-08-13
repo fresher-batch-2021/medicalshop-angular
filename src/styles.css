@@ -147,6 +147,12 @@ p{
  main {
   margin:10px;
 }
+.welcome
+{
+  text-align: center;
+  font-size: x-large;
+  color: blue;
+}
  header { 
   overflow:auto;
   background-color:lightblue;

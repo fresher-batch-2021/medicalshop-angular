@@ -1,0 +1,28 @@
+<h3 class="pay-head">Payment Details</h3>
+<form  >  
+    <div class="Billing">
+      <div class="address">
+        <h3>Billing Address</h3>
+        <label for="name">Name*</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" required > <br/>
+        <label for="street">Street*</label>
+        <input type="text" name="street" [(ngModel)]="street"  id="street" required> <br/>
+        <label for="city">City*:</label>
+        <select id="city" name="city" [(ngModel)]="city"  required >
+          <option value="" disabled>--SELECT--</option>
+          <option value="chennai">Chennai</option>
+          <option value="coimbatore">coimbatore</option>
+          <option value="madurai">Madurai</option>
+          <option value="Thanjavur">Thanjavur</option>
+          <option value="Theni">Theni</option>
+          <option value="Trichy">Trichy</option>
+          <option value="Villupuram">Villupuram</option>
+          <option value="Virudhunagar">virudhunagar</option>  
+        </select><br>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state"  [(ngModel)]="state"  required ><br>
+        <label for="pincode">pincode</label>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="pincode"  required><br>
+      </div>
+      <button (click)="paymentProcess()">Proceed</button>
+
